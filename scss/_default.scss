@@ -1,0 +1,139 @@
+html {
+	scroll-behavior: smooth;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Proxima Nova Rg';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 1.5;
+	color: $gray-600;
+	padding: 0;
+	margin: 0;
+
+	&#landing {
+		position: relative;
+		padding-top: 68px;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: bold;
+	line-height: 1.2;
+	color: $gray-800;
+}
+
+h1 {
+	font-size: 3.2em;
+	letter-spacing: -.035rem;
+	margin-bottom: 24px;
+}
+
+h2 {
+	font-size: 2.5em;
+	letter-spacing: -.022rem;
+	margin-bottom: 12px;
+}
+
+h3 {
+	font-size: 2em;
+	letter-spacing: -.011rem;
+	margin-bottom: 12px;
+}
+
+h4 {
+	font-size: 1.5em;
+	margin-bottom: 12px;
+}
+
+h5 {
+	font-size: 1.3em;
+	margin-bottom: 6px;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+
+.btn {
+	font-family: 'Proxima Nova Lt';
+	font-size: 15px;
+	font-weight: 600;
+	font-style: normal;
+	padding: 11px 22px;
+	border-width: 2px;
+
+	i {
+		font-size: 12px;
+		margin: 0 2px;
+	}
+}
+
+.btn-lg {
+	font-size: 17px;
+	padding: 12px 18px;
+}
+
+.input-group {
+	margin-bottom: 12px;
+
+	&-text {
+		background: transparent;
+		border-left: none;
+		color: $gray-600;
+		font-size: 14px;
+		padding: 10px 16px;
+		transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	}
+	.form-control {
+		height: 48px;
+		border-right: none;
+
+		&:focus {
+			border-color: $primary;
+			box-shadow: none;
+			outline: none;
+
+			&+.input-group-append>.input-group-text {
+				color: $primary;
+				border-color: $primary;
+			}
+		}
+	}
+}
+
+.form-group {
+	margin-bottom: 12px;
+
+	.form-control {
+		&:focus {
+			border-color: $primary;
+			box-shadow: none;
+			outline: none;
+		}
+	}
+	.custom-select {
+		font-size: 15px;
+		height: 48px;
+	}
+}
+
+.icon-lg {
+	display: block;
+	width: auto;
+	height: 60px;
+	margin-bottom: 24px;
+}
+
+.border--style {
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 0;
+}

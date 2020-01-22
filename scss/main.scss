@@ -1,0 +1,545 @@
+@import "bootstrap/bootstrap";
+@import "bootstrap/bootstrap-grid";
+@import "bootstrap/bootstrap-reboot";
+@import "font-awesome/fontawesome";
+@import "_font-face";
+@import "_global";
+
+//Navigation Bar
+.navbar {
+	padding: 0 20px;
+	background-color: $white;
+	transition: all .15s ease-in-out;
+
+	&-brand {
+		padding: 0;
+		height: 36px;
+	}
+	.navbar-toggler {
+		padding: 3px 8px;
+		border-radius: 0 6px 0 6px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+	.navbar-collapse {
+		.navbar-nav {
+			.nav-item {
+				.nav-link {
+					position: relative;
+					font-family: 'Proxima Nova Lt';
+					font-weight: 600;
+					font-size: 15px;
+					color: $gray-800;
+					padding: 1.5rem 0;
+					margin: 0 1.5rem;
+					transition: all .17s ease-in-out;
+
+					&:before {
+						content: '';
+						display: block;
+						width: 0;
+						height: 2px;
+						background-color: $primary;
+						position: absolute;
+						left: 50%;
+						bottom: 0;
+						transition: all .15s ease-in-out;
+					}
+
+					&:hover {
+						color: $primary;
+					}
+					&.active {
+						color: $primary!important;
+
+						&:before {
+							left: 0;
+							width: 100%;
+						}
+					}
+				}
+				.divide {
+					width: 1px;
+					height: 100%;
+					background-color: $gray-500;
+				}
+			}
+			&--social {
+				.nav-item {
+					display: flex;
+
+					.nav-link {
+						padding: 0 14px;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+/*	&.sticky {
+		background-color: transparent;
+		box-shadow: none;
+
+		.navbar-collapse {
+			.navbar-nav {
+				.nav-item {
+					.nav-link {
+						color: $white;
+					}
+				}
+			}
+		}
+		&--active {
+			background-color: $white;
+			box-shadow: 0 2px 18px -4px rgba(0,49,95,.2);
+
+			.navbar-collapse {
+				.navbar-nav {
+					.nav-item {
+						.nav-link {
+							color: $gray-800;
+						}
+					}
+				}
+			}
+		}
+	}*/
+}
+//Navigation Bar End
+
+.home-header {
+	display: flex;
+	align-items: center;
+	position: relative;
+	height: calc(100vh - 68px);
+	padding: 96px 0 84px;
+	background-image: url("../img/header-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	.shape {
+		left: -140px;
+	}
+	h1 {
+		color: $white;
+		margin-bottom: 12px;
+	}
+	p {
+		font-size: 1.1rem;
+		padding-right: 20%;
+	}
+	&__table {
+		margin-top: 24px;
+
+		.caption {
+			caption-side: top;
+			font-size: 14px;
+			font-weight: normal;
+			font-style: italic;
+			color: $white;
+			margin-bottom: 18px;
+		}
+		.table {
+
+			thead th,
+			tbody td {
+				font-size: 14px;
+				font-weight: normal;
+				line-height: 1.2;
+				color: $white;
+				border: none;
+				border-right: 2px solid rgba(255, 255, 255, 0.5);
+				padding: 0.4rem 0.6rem;
+
+				&:first-child {
+					padding-left: 0;
+				}
+				&:last-child {
+					border-right: none;
+				}
+			}
+			thead th {
+				padding-top: 0;
+				font-family: Proxima Nova Lt;
+				font-weight: 600;
+
+				span {
+					font-family: Proxima Nova Rg;
+					font-weight: normal;
+				}
+			}
+			tbody td {
+				padding-bottom: 0;
+			}
+		}
+	}
+	&__form {
+		border-radius: 12px;
+		padding: 36px;
+		background-color: $white;
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+		.input-group {
+			margin-bottom: 12px;
+			.form-control {
+				height: 48px;
+			}
+			&-text {
+				background: transparent;
+				border-left: none;
+				color: #868e96;
+				font-size: 14px;
+			}
+			.form-control {
+				border-right: none;
+			}
+		}
+		.form-group {
+			margin-bottom: 12px;
+			.custom-select {
+				height: 48px;
+			}
+		}
+		.btn {
+			height: 48px;
+		}
+	}
+}
+
+.features {
+	padding-right: 15px;
+
+	img {
+		height: 60px;
+		margin-bottom: 24px;
+	}
+}
+
+.banner {
+	h2 {
+		margin-bottom: 36px;
+	}
+}
+
+.chart-card {
+	border-radius: 6px;
+}
+
+.portfolio {
+	background-image: url("../img/porfolio-bg@2x.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left top;
+
+	span {
+		line-height: 1.2;
+		white-space: nowrap;
+		margin-left: 10px;
+	}
+}
+
+.custom-card {
+	height: 100%;
+	padding: 30px;
+	border-radius: 12px;
+	background-color: $white;
+
+	img {
+		margin-bottom: 24px;
+		height: 60px;
+	}
+	p {
+		padding-right: 15px;
+	}
+}
+
+.testimonials {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 24px 16px;
+
+	&__quote {
+		height: 30px;
+		margin-bottom: 18px;
+	}
+	p {
+		margin-bottom: 24px;
+	}
+}
+
+.owl-carousel {
+	.owl-dots {
+		margin-top: 30px;
+		text-align: center;
+
+		.owl-dot {
+			&:focus {
+				outline: none;
+			}
+			span {
+				display: block;
+				width: 12px;
+				height: 12px;
+				background-color: $gray-300;
+				border-radius: 10rem;
+				margin: 0 6px;
+			}
+			&.active {
+				span {
+					background-color: $primary;
+				}
+			}
+		}
+	}
+}
+
+//About US
+.card-team {
+	overflow: hidden;
+	height: 100%;
+	margin: 0 15px;
+	border-radius: 6px;
+
+	&__image {
+		width: 100%;
+		height: 324px;
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: left;
+		filter: grayscale(100%);
+		transition: all 200ms ease;
+	}
+	&__body {
+		padding: 24px 0;
+
+		span {
+			margin: 9px 0 0;
+		}
+		p {
+			margin: 18px 0 0;
+		}
+	}
+	&:hover {
+		.card-team__image {
+			filter: grayscale(5%);
+		}
+	}
+}
+//About US END
+
+.step {
+	padding-right: 18px;
+	margin-bottom: 48px;
+
+	&__number {
+		width: 42px;
+		height: 36px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 14px;
+		font-weight: bold;
+		color: #0089ce;
+		background-color: rgba(0,137,206,.11);
+		border-radius: 0 6px 0 6px;
+		margin-bottom: 24px;
+	}
+}
+
+.table-stories {
+	color: $gray-800;
+
+	thead th,
+	tbody td,
+	tbody th {
+		border: none;
+		text-align: center;
+		padding: 1.18rem 1rem;
+	}
+
+	thead {
+		font-size: 1.1em;
+	}
+
+	tbody {
+		tr {
+			&:nth-of-type(odd) {
+				background-color: $white;
+			}
+		}
+	}
+}
+
+.p-invest {
+	.card {
+		min-height: 308px;
+		border-radius: 0 12px 12px 0;
+		border-left: 2px solid $gray-600;
+		box-shadow: none;
+		cursor: grab;
+
+		&:hover {
+			border-color: $primary;
+		}
+		img {
+			width: auto;
+			height: 60px;
+		}
+		p {
+			margin: 18px 0 12px;
+		}
+	}
+}
+
+.accordion-wrap {
+	overflow: hidden;
+	border-radius: 12px;
+
+	.accordion {
+		padding: 24px;
+		background-color: $white;
+		border-bottom: 2px solid $primary;
+
+		&:last-child {
+			border: none;
+		}
+		&__header {
+
+			.btn {
+				font-family: Proxima Nova Rg;
+				font-weight: bold;
+				font-size: 1em;
+				white-space: normal;
+				text-align: left;
+				color: $gray-800;
+
+				i {
+					font-size: 1em;
+					transform: rotate(180deg);
+				}
+				&:hover,
+				&:focus {
+					text-decoration: none;
+					color: $gray-800;
+				}
+				&.collapsed {
+					i {
+						transform: rotate(0);
+					}
+				}
+			}
+		}
+		&__body {
+			margin-top: 12px;
+			padding-right: 18px;
+		}
+	}
+}
+
+.quote-wrap {
+	overflow: hidden;
+	border-radius: 12px;
+	background-color: $white;
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		padding-bottom: 55%;
+		background-image: url("../img/charliemungersketch.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 105%;
+	}
+	.blockquote {
+		font-size: 1.1em;
+		padding: 36px;
+		margin: 0;
+		text-align: center;
+
+		p {
+			margin-bottom: 36px;
+		}
+	}
+}
+
+//Contact
+.contact-header {
+	position: relative;
+	height: 432px;
+}
+
+.contacts {
+	margin-top: -96px;
+
+	&__card {
+		display: flex;
+		overflow: hidden;
+		border-radius: 12px;
+		box-shadow: 0 9px 50px -3px rgba(0,49,95,.2);
+
+		.col {
+			flex: 0 0 50%;
+			padding: 48px;
+		}
+		&__row {
+			margin-bottom: 24px;
+
+			h5 {
+				font-size: 1.1em;
+				margin-bottom: 3px;
+			}
+		}
+	}
+}
+
+//Footer
+.footer {
+	padding-top: 84px;
+	background-image: url("../img/footer-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	font-size: 14px;
+
+	&__brand {
+		display: block;
+		padding-bottom: 30px;
+	}
+	p {
+		opacity: .85;
+	}
+	.divide {
+		width: 1px;
+		height: 20px;
+		background-color: $white;
+		opacity: .8;
+		margin: 0 20px;
+	}
+	&__footer {
+		border-top: 1px solid rgba(255, 255, 255, 0.8);
+		margin-top: 30px;
+	}
+	&__social {
+		padding: 20px 0;
+		display: flex;
+
+		a {
+			color: $white;
+		}
+	}
+	&__copy {
+		text-align: right;
+		padding: 20px 0;
+		color: $white;
+		opacity: .85;
+	}
+}
+
+@import "_default";
+@import "_media";
