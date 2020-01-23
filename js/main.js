@@ -2,25 +2,19 @@
 
    var _s = {
 
-     bodyLanding : '#landing',
      navScroll : '#navbarscroll',
      homeNavLink  : '#navbarscroll .nav-link',
+     homeSelect  : '#investmentAmount',
 
    };
-
-   $(_s.bodyLanding).scrollspy({
-
-     spy: scroll,
-     target: '#navbarscroll',
-     offset: 80,
-
-   });
 
    $(_s.homeNavLink).click(function () {
 
      $(_s.navScroll).removeClass('show');
 
    });
+
+   $(_s.homeSelect).niceSelect();
 
 /*   $(document).on("scroll", function(){
      if

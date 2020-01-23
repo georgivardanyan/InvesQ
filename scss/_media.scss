@@ -50,10 +50,7 @@
 			width: 100%;
 		}
 		p {
-			margin-bottom: 26px!important;
-		}
-		&__form {
-			margin-top: 24px;
+			padding-right: 15%;
 		}
 	}
 
@@ -103,6 +100,7 @@
 	}
 
 	h3 {
+		font-size: 1.8em;
 		margin-bottom: 1rem;
 	}
 
@@ -129,8 +127,18 @@
 	.home-header {
 		padding: 72px 0;
 
+		h1 {
+			margin-bottom: 18px;
+		}
+		&__table {
+			margin-top: 36px;
+		}
 		&__form {
-			max-width: 500px;
+			margin-top: 36px;
+
+			.form--col {
+				flex: 0 0 50%;
+			}
 		}
 	}
 
@@ -158,10 +166,10 @@
 	}
 
 	.card-team {
-		margin: 0;
+		margin: 0 15px 0 0;
 
 		&__image {
-			height: 260px;
+			height: 204px;
 			background-size: auto 100%;
 			background-position: left;
 		}
@@ -225,40 +233,24 @@
 			padding-right: 0;
 		}
 
-		&__table {
-			.caption {
-				margin-bottom: 8px;
+		.home-header {
+			padding: 72px 0;
+
+			&__form {
+				margin-top: 36px;
+
+				.form--col {
+					flex: 0 0 100%;
+				}
 			}
-			.table {
-				display: flex;
-				width: 100%;
+			&__table {
+				padding: 24px;
+				margin-top: 24px;
 
-				thead,
-				tbody {
-					flex: 0 0 50%;
-					display: block;
-
-					tr {
-						display: flex;
-						flex-direction: column;
-						height: 100%;
+				.t-row {
+					h4 {
+						margin-bottom: 0;
 					}
-				}
-
-				thead th,
-				tbody td {
-					flex: 1 1 auto;
-					min-height: 44px;
-					padding: 0.6rem 0;
-					border: none;
-				}
-				thead th {
-					display: flex;
-					flex-direction: column;
-					padding-right: 0.6rem;
-				}
-				tbody td {
-					padding: 0.6rem 0;
 				}
 			}
 		}
