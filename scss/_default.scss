@@ -32,19 +32,16 @@ h5 {
 
 h1 {
 	font-size: 3.2em;
-	letter-spacing: -.035rem;
 	margin-bottom: 24px;
 }
 
 h2 {
 	font-size: 2.5em;
-	letter-spacing: -.022rem;
 	margin-bottom: 12px;
 }
 
 h3 {
 	font-size: 2em;
-	letter-spacing: -.011rem;
 	margin-bottom: 12px;
 }
 
@@ -68,8 +65,9 @@ p {
 	font-size: 15px;
 	font-weight: 600;
 	font-style: normal;
-	padding: 11px 22px;
-	border-width: 2px;
+	text-transform: uppercase;
+	padding: 12px 26px;
+	border-radius: 0;
 
 	i {
 		font-size: 12px;
@@ -82,6 +80,10 @@ p {
 	padding: 12px 18px;
 }
 
+.form-control {
+	border-radius: 0;
+}
+
 .input-group {
 	margin-bottom: 12px;
 
@@ -91,6 +93,7 @@ p {
 		color: $gray-600;
 		font-size: 14px;
 		padding: 10px 16px;
+		border-radius: 0;
 		transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 	}
 	.form-control {
@@ -123,6 +126,7 @@ p {
 	.custom-select {
 		font-size: 15px;
 		height: 48px;
+		border-radius: 0;
 	}
 }
 

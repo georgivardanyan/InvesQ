@@ -46,26 +46,26 @@ $arrow_color: $gray !default;
     border-color: $primary_light;
   }
   // Arrow
-  &:after {
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff;
+  &:before {
+    border-bottom: 2px solid #868e96;
+    border-right: 2px solid #868e96;
     content: '';
     display: block;
-    height: 8px;
+    width: 9px;
+    height: 9px;
     margin-top: -6px;
     pointer-events: none;
     position: absolute;
-    right: 6px;
+    right: 18px;
     top: 50%;
     transform-origin: 66% 66%;
     transform: rotate(45deg);
     transition: all 0.15s ease-in-out;
-    width: 8px;
   }
 
   &.open {
     @extend :active;
-    &:after {
+    &:before {
       transform: rotate(-135deg);
     }
     .list {
@@ -78,7 +78,7 @@ $arrow_color: $gray !default;
     border-color: lighten($gray_light, 2%);
     color: $gray;
     pointer-events: none;
-    &:after {
+    &:before {
       border-color: lighten($arrow_color, 20%);
     }
   }

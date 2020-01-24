@@ -1,10 +1,11 @@
- $( document ).ready(function() {
+jQuery(document).ready(function() {
 
    var _s = {
 
      navScroll : '#navbarscroll',
      homeNavLink  : '#navbarscroll .nav-link',
      homeSelect  : '#investmentAmount',
+     scrollTop : '.back-to-top',
 
    };
 
@@ -14,20 +15,18 @@
 
    });
 
-   $(_s.homeSelect).niceSelect();
+    $(_s.scrollTop).click(function (e) {
 
-/*   $(document).on("scroll", function(){
-     if
-     ($(document).scrollTop() > 86){
-       $("#sticky").addClass("sticky--active");
-       $('#logo').attr('src','img/logo.svg');
-     }
-     else
-     {
-       $("#sticky").removeClass("sticky--active");
-       $('#logo').attr('src','img/logo-light.svg');
-     }
-   });*/
+      e.preventDefault();
+
+      $('html,body').animate({
+        scrollTop: 0
+      }, 300);
+
+      return false;
+    });
+
+   $(_s.homeSelect).niceSelect();
 
   $(".p-invest").owlCarousel({
 

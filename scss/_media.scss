@@ -11,6 +11,12 @@
 }
 
 @media (max-width: 991px) {
+
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
 	.navbar {
 		padding: 15px;
 
@@ -51,6 +57,10 @@
 		}
 		p {
 			padding-right: 15%;
+		}
+		&__form {
+			max-width: 500px;
+			margin-top: 24px;
 		}
 	}
 
@@ -202,11 +212,9 @@
 	}
 
 	.footer {
-		padding-top: 60px;
-
 		&__brand {
-			padding-bottom: 20px;
-			margin-top: 15px;
+			padding-bottom: 12px;
+			margin-top: 24px;
 		}
 
 		&__footer {
@@ -244,12 +252,48 @@
 				}
 			}
 			&__table {
-				padding: 24px;
-				margin-top: 24px;
+				.caption {
+					margin-bottom: 8px;
+				}
+				.table {
+					display: flex;
+					width: 100%;
+					border: none;
 
-				.t-row {
-					h4 {
-						margin-bottom: 0;
+					thead,
+					tbody {
+						display: block;
+
+						tr {
+							display: flex;
+							flex-direction: column;
+							height: 100%;
+						}
+					}
+
+					thead th,
+					tbody td {
+						flex: 1 1 auto;
+						min-height: 44px;
+						border-bottom-width: 1px;
+						//padding: 0.6rem 0;
+						//border: none;
+					}
+					thead {
+						flex: 0 0 70%;
+
+						th {
+							display: flex;
+							flex-direction: column;
+							//padding-right: 0.6rem;
+						}
+					}
+					tbody {
+						flex: 0 0 30%;
+
+						td {
+							//padding: 0.6rem 0;
+						}
 					}
 				}
 			}

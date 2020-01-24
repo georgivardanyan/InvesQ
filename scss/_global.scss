@@ -70,7 +70,6 @@
 	font-family: 'Proxima Nova Lt';
 	font-weight: 600;
 	line-height: 1.4;
-	letter-spacing: 0;
 }
 
 .section-title {
@@ -82,11 +81,8 @@
 
 	p {
 		font-size: 1.2em;
+		font-style: italic;
 		margin: 0;
-	}
-
-	h3 + p {
-		font-size: 1em;
 	}
 }
 
@@ -94,13 +90,13 @@
 	display: inline-block;
 	font-size: 12px;
 	font-weight: normal;
-	letter-spacing: .025rem;
+	letter-spacing: .1rem;
 	text-transform: uppercase;
 	border-radius: 0 6px 0 6px;
 	padding: 4px 12px 2px;
 	color: $primary;
 	background-color: $primary--light;
-	margin-bottom: 12px;
+	margin-bottom: 18px;
 }
 
 .alert {
