@@ -64,8 +64,26 @@
 		}
 	}
 
+	.why {
+		.row {
+			>div {
+				&:nth-child(3) {
+					>div {
+						border-top-right-radius: 0;
+					}
+				}
+				&:nth-child(4) {
+					>div {
+						border-bottom-left-radius: 0;
+					}
+				}
+			}
+		}
+	}
+
 	#performance {
 		.chart-card {
+			width: 100%;
 			padding: 0;
 			margin-top: 24px;
 		}
@@ -94,10 +112,6 @@
 
 @media (max-width: 767px) {
 
-	body {
-		font-size: 15px;
-	}
-
 	h1 {
 		font-size: 40px;
 		letter-spacing: -.02rem;
@@ -106,11 +120,6 @@
 
 	h2 {
 		letter-spacing: 0;
-		margin-bottom: 1rem;
-	}
-
-	h3 {
-		font-size: 1.8em;
 		margin-bottom: 1rem;
 	}
 
@@ -128,10 +137,6 @@
 
 	.section-title {
 		padding-bottom: 40px;
-
-		p {
-			font-size: 18px;
-		}
 	}
 
 	.home-header {
@@ -148,6 +153,24 @@
 
 			.form--col {
 				flex: 0 0 50%;
+			}
+		}
+	}
+
+	.why {
+		.row {
+			>div {
+				&:first-child {
+					>div {
+						border-top-right-radius: 12px;
+					}
+				}
+				&:last-child {
+					>div {
+						border-bottom-left-radius: 12px;
+						border-bottom-right-radius: 12px;
+					}
+				}
 			}
 		}
 	}
@@ -199,6 +222,11 @@
 				}
 			}
 		}
+	}
+
+	.features {
+		margin-bottom: 36px;
+		padding-right: 12px;
 	}
 
 	.accordion-wrap {
@@ -296,6 +324,15 @@
 						}
 					}
 				}
+			}
+		}
+	}
+	#performance {
+		.chart-card {
+			perspective: none;
+
+			img {
+				transform: rotate(0);
 			}
 		}
 	}

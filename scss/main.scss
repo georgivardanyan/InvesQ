@@ -32,6 +32,7 @@
 					font-family: 'Proxima Nova Lt';
 					font-weight: 600;
 					font-size: 15px;
+					text-transform: uppercase;
 					color: $gray-800;
 					padding: 1.5rem 0;
 					margin: 0 1.5rem;
@@ -221,10 +222,10 @@
 }
 
 .features {
-	padding: 24px;
+	padding-right: 36px;
 
 	img {
-		height: 54px;
+		height: 48px;
 		margin-bottom: 24px;
 	}
 }
@@ -239,7 +240,16 @@
 }
 
 .chart-card {
-	border-radius: 6px;
+	width: 105%;
+	perspective-origin: 0;
+	perspective: 1500px;
+
+	img {
+		transform: rotateY(-45deg) rotateX(10deg);
+		backface-visibility: hidden;
+		border-radius: 8px 12px 12px 9px;
+		box-shadow: 18px 12px 36px -4px rgba(0, 0, 0, 0.11);
+	}
 }
 
 .portfolio {
@@ -255,18 +265,38 @@
 	}
 }
 
+.why {
+	.row {
+		margin-left: -6px;
+		margin-right: -6px;
+
+		>div {
+			padding-left: 6px;
+			padding-right: 6px;
+			margin-bottom: 12px;
+
+			&:nth-child(3) {
+				>div {
+					border-top-right-radius: 12px;
+				}
+			}
+			&:nth-child(4) {
+				>div {
+					border-bottom-left-radius: 12px;
+				}
+			}
+		}
+	}
+}
+
 .custom-card {
 	height: 100%;
-	padding: 30px;
-	border-radius: 12px;
+	padding: 28px 30px;
 	background-color: $white;
 
 	img {
+		height: 48px;
 		margin-bottom: 24px;
-		height: 54px;
-	}
-	p {
-		padding-right: 15px;
 	}
 }
 
@@ -279,8 +309,8 @@
 	padding: 24px 16px;
 
 	&__quote {
-		height: 30px;
-		margin-bottom: 18px;
+		height: 24px;
+		margin-bottom: 12px;
 	}
 	p {
 		margin-bottom: 24px;
@@ -331,11 +361,8 @@
 	&__body {
 		padding: 24px 0;
 
-		span {
-			margin: 9px 0 0;
-		}
 		p {
-			margin: 18px 0 0;
+			margin: 0;
 		}
 	}
 	&:hover {
@@ -351,7 +378,7 @@
 	margin-bottom: 48px;
 
 	&__number {
-		width: 42px;
+		min-width: 36px;
 		height: 36px;
 		display: inline-flex;
 		justify-content: center;
@@ -361,7 +388,7 @@
 		color: #0089ce;
 		background-color: rgba(0,137,206,.11);
 		border-radius: 0 6px 0 6px;
-		margin-bottom: 18px;
+		margin-bottom: 24px;
 	}
 }
 
