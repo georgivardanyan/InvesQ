@@ -2,6 +2,11 @@
 	.container {
 		max-width: 1040px;
 	}
+	.blogPage {
+		.container {
+			max-width: 1180px;
+		}
+	}
 }
 
 @media (max-width: 1199px) {
@@ -235,6 +240,25 @@
 
 			&__body {
 				padding-right: 0;
+			}
+		}
+	}
+
+	.post-card {
+		&--large {
+			flex-direction: column;
+		}
+	}
+
+	.blog-sidebar {
+		padding-top: 0;
+		padding-left: 0;
+	}
+
+	.table-stories {
+		thead {
+			th {
+				white-space: nowrap;
 			}
 		}
 	}
